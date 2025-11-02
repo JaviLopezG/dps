@@ -1,0 +1,4 @@
+break *funcion_vulnerable+82
+disable $bpnum
+
+

@@ -1,0 +1,2 @@
+break *funcion_vulnerable+82
+

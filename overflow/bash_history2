@@ -1,0 +1,29 @@
+cd uni
+cd dps
+cd overflow
+vi crear_exploit.py 
+git add *
+ls
+git commit -m "Funciona el reverse shell aunque rompe a continuación."
+git push
+cat vulnerable.c
+ls
+ls fedora
+mv fedora/fuzzer.py .
+sudo nc -klvp 80
+cat fuzzer.py 
+cat crear_exploit.py 
+./vulnerable $(python3 crear_exploit.py)
+
+./vulnerable $(python3 crear_exploit.py)
+cat /proc/sys/kernel/randomize_va_space
+sudo sysctl -w kernel.randomize_va_space=0
+./vulnerable $(python3 crear_exploit.py)
+vi crear_exploit.py 
+./vulnerable $(python3 crear_exploit.py)
+vi crear_exploit.py 
+./vulnerable $(python3 crear_exploit.py)
+coredumpctl dump vulnerable --output=./core
+gdb vulnerable core
+sudo sysctl -w kernel.randomize_va_space=2
+cat /proc/sys/kernel/randomize_va_space

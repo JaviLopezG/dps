@@ -4,7 +4,7 @@
 
 void funcion_vulnerable(char *entrada) {
     char buffer[128]; // Buffer de 128 bytes
-    printf("Copiando cadena de entrada...\n");
+    printf("Copiando cadena de entrada %p a %p...\n", entrada, &buffer);
     // La vulnerabilidad reside aquí: strcpy no comprueba límites.
     strcpy(buffer, entrada); 
     printf("Copia terminada.\n");
